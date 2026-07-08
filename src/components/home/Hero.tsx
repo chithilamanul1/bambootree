@@ -39,9 +39,9 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
           >
             <h2 className="font-serif-display text-4xl font-light leading-[1.05] tracking-editorial text-white sm:text-5xl">
-              Where Nature
+              The Best Airport
               <br />
-              Meets Comfort
+              Transit Hotel
             </h2>
             <div className="mt-5 flex items-center gap-3 text-white/85">
               <span className="flex items-center gap-1.5">
@@ -62,7 +62,7 @@ export function Hero() {
           >
             <div className="mb-3 flex items-center justify-between">
               <p className="font-serif-display text-lg text-white">
-                Comfort, Inspired by Nature
+                Find Your Airport Layover Hotel
               </p>
               <ArrowUpRightIcon className="h-4 w-4 text-white/60" />
             </div>

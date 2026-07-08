@@ -6,12 +6,12 @@ import { PlaneIcon, ClockIcon, WifiIcon, ShowerHeadIcon, LuggageIcon, CoffeeIcon
 import { SectionLabel } from '../ui/SectionLabel'
 
 const features = [
-  { icon: PlaneIcon, title: 'Airport shuttle', desc: 'Complimentary transfers on a 30-minute loop, day and night.' },
-  { icon: ClockIcon, title: 'Flexible stays', desc: 'Book by the hour for a layover or by the night for a full reset.' },
-  { icon: ShowerHeadIcon, title: 'Fresh & ready', desc: 'Hot showers, fresh linen and blackout blinds in every room.' },
-  { icon: WifiIcon, title: 'Fast Wi-Fi', desc: 'Reliable high-speed connection to work, stream or check in online.' },
-  { icon: LuggageIcon, title: 'Luggage hold', desc: 'Secure storage so you can explore hands-free before your flight.' },
-  { icon: CoffeeIcon, title: 'Round-the-clock café', desc: 'Warm meals, coffee and tea available whenever your body clock needs it.' },
+  { icon: PlaneIcon, title: 'Free Airport Shuttle', desc: 'Free rides to and from the airport day and night.' },
+  { icon: ClockIcon, title: 'Flexible Stays', desc: 'Book by the hour for a short layover or a full night.' },
+  { icon: ShowerHeadIcon, title: 'Clean & Fresh', desc: 'Hot showers, clean beds, and dark rooms for good sleep.' },
+  { icon: WifiIcon, title: 'Fast Free Wi-Fi', desc: 'Fast internet to work, watch movies, or check your flight.' },
+  { icon: LuggageIcon, title: 'Luggage Storage', desc: 'Keep your bags safe with us while you go outside.' },
+  { icon: CoffeeIcon, title: '24/7 Food & Drink', desc: 'Hot food, coffee, and tea ready any time you need it.' },
 ]
 
 export function Convenience() {
@@ -19,9 +19,9 @@ export function Convenience() {
     <section className="w-full bg-white py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="max-w-2xl">
-          <SectionLabel>Built for travelers</SectionLabel>
+          <SectionLabel>Made for travelers</SectionLabel>
           <h2 className="mt-5 font-serif-display text-3xl font-light leading-tight tracking-editorial text-[#17201b] sm:text-4xl">
-            Everything you need for the space between flights.
+            Everything you need for your airport layover and transit stay.
           </h2>
         </div>
         <div className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-[#e6e6e1] bg-[#e6e6e1] sm:grid-cols-2 lg:grid-cols-3">

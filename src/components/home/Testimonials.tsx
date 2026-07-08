@@ -6,9 +6,9 @@ import { StarIcon } from 'lucide-react'
 import { SectionLabel } from '../ui/SectionLabel'
 
 const testimonials = [
-  { quote: 'Perfect for a long layover. Quiet, spotless, and I actually slept before my morning flight. The shuttle was right on time.', name: 'Anjali R.', detail: 'Layover guest · Colombo' },
-  { quote: 'Booked a pod for six hours and it felt like a proper hotel. The green, calm vibe is such a relief after a busy terminal.', name: 'Marcus T.', detail: 'Business traveler · Singapore' },
-  { quote: 'Ordered a bouquet from Blooms for a friend arriving on the same flight — beautiful work and delivered to arrivals. Lovely touch.', name: 'Priya S.', detail: 'Blooms customer' },
+  { quote: 'The best colombo transit hotel! It is very quiet and clean. I slept great before my flight and the free car ride was on time.', name: 'Anjali R.', detail: 'Layover guest · Colombo' },
+  { quote: 'I booked a transit room for six hours. It is a great layover hotel near the airport. Very nice and green hotel.', name: 'Marcus T.', detail: 'Business traveler · Singapore' },
+  { quote: 'One of the best hotels in Negombo. The staff is so kind and the food is great. Very close to the airport.', name: 'Priya S.', detail: 'Happy customer' },
 ]
 
 export function Testimonials() {
@@ -16,9 +16,9 @@ export function Testimonials() {
     <section className="w-full bg-white py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="max-w-2xl">
-          <SectionLabel>Guest stories</SectionLabel>
+          <SectionLabel>Happy Guests</SectionLabel>
           <h2 className="mt-5 font-serif-display text-3xl font-light leading-tight tracking-editorial text-[#17201b] sm:text-4xl">
-            Travelers rest easy here.
+            Top hotel near airport for travelers.
           </h2>
         </div>
         <div className="mt-14 grid gap-6 md:grid-cols-3">

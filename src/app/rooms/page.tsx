@@ -8,33 +8,33 @@ import { Button } from '@/components/ui/Button'
 
 const rooms = [
   {
-    name: 'Transit Pod',
+    name: 'Transit Room Hotel',
     type: 'By the hour',
     price: 'From $25 / 3hrs',
-    desc: 'A compact, soundproofed pod perfect for catching up on sleep between flights. Features a flat bed, reading light, and secure luggage storage below.',
+    desc: 'A small, quiet room perfect for a short sleep between flights. It is the best airport accommodation for a quick rest.',
     guests: '1',
     bed: '1 Single',
-    features: ['Soundproofed', 'Reading light', 'USB charging', 'Shared luxury showers'],
+    features: ['Quiet room', 'Reading light', 'USB charging', 'Shared clean showers'],
     img: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1000&q=80',
   },
   {
-    name: 'Bamboo Nightly',
+    name: 'Bamboo Hotel Room',
     type: 'Full night',
     price: 'From $80 / night',
-    desc: 'Our standard private room with an en-suite bathroom. Designed with natural materials to help you unwind and reset your body clock.',
+    desc: 'Our normal private room with a bathroom. This is a great choice if you want hotels near Seeduwa Sri Lanka or Negombo hotels room price that is affordable.',
     guests: '2',
     bed: '1 Queen',
-    features: ['En-suite bathroom', 'Rain shower', 'Smart TV', 'Work desk'],
+    features: ['Private bathroom', 'Hot shower', 'Smart TV', 'Work desk'],
     img: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1000&q=80',
   },
   {
-    name: 'Grove Suite',
+    name: 'Airport Suite',
     type: 'Full night',
     price: 'From $120 / night',
-    desc: 'A spacious suite offering extra room to stretch out. Includes a small seating area and premium organic bath amenities.',
+    desc: 'A large airport suite for your layover hotel stay. It has more space to relax and premium bath items.',
     guests: '2',
     bed: '1 King',
-    features: ['Seating area', 'Premium bath products', 'Minibar', 'Espresso machine'],
+    features: ['Seating area', 'Premium soap', 'Minibar', 'Coffee machine'],
     img: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80',
   },
   {
@@ -53,9 +53,9 @@ export default function Rooms() {
   return (
     <div className="w-full bg-[#f4f4f1] pb-24">
       <PageHeader
-        label="Accommodations"
-        title="Rooms & Rates"
-        description="Whether you have three hours or three days, find your perfect space to rest."
+        label="Hotel Rooms Airport"
+        title="Rooms & Prices"
+        description="Find the best hotel rooms near airport for your transit stay or layover. We offer great low price hotels in Negombo."
         image="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=2000&q=80"
       />
       <div className="mx-auto mt-16 max-w-7xl px-6 lg:px-10">

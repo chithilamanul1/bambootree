@@ -19,16 +19,16 @@ export default function Contact() {
   return (
     <div className="w-full bg-[#f4f4f1] pb-24">
       <PageHeader
-        label="Get in touch"
-        title="We're Here 24/7"
-        description="Whether you have a question about a booking or need a last-minute shuttle."
+        label="Contact Bamboo Tree Hotel"
+        title="Contact Our Airport Area Hotel"
+        description="Need to know how to get from airport to hotel? We are an airside hotel location nearby. Call us anytime!"
         image="https://images.unsplash.com/photo-1558222218-b7b54eede3f3?auto=format&fit=crop&w=2000&q=80"
       />
       <div className="mx-auto mt-20 max-w-7xl px-6 lg:px-10">
         <div className="grid gap-16 lg:grid-cols-2">
           <div>
             <h2 className="font-serif-display text-3xl text-[#17201b]">Contact Information</h2>
-            <p className="mt-4 text-[#7b827b]">Reach out to us directly through any of the following channels. We typically respond to emails within 2 hours.</p>
+            <p className="mt-4 text-[#7b827b]">Contact us using the details below. We answer emails very quickly.</p>
             
             <div className="mt-10 space-y-8">
               <div className="flex gap-4">

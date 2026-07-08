@@ -19,10 +19,10 @@ export function RoomPreview() {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-xl">
             <h2 className="font-serif-display text-3xl font-light tracking-editorial text-[#17201b] sm:text-4xl">
-              Discover Your Ideal Stay
+              Best Hotel Rooms Near Airport
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-[#7b827b]">
-              From quick transit pods to full nightly retreats, we have the perfect space for every kind of traveler.
+              From quick transit rooms to nightly stays, we have the best airport accommodation for you.
             </p>
           </div>
           <Button href="/rooms" variant="outline">

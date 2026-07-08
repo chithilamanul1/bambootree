@@ -10,8 +10,8 @@ export default function About() {
     <div className="w-full bg-white pb-24">
       <PageHeader
         label="Our Story"
-        title="A Green Respite"
-        description="Founded on the belief that transit doesn't have to be tiring."
+        title="The Bamboo Tree Hotel"
+        description="We are the best place to stay in Negombo, a great hotel close to airport for your rest."
         image="https://images.unsplash.com/photo-1542314831-c6a4d1429d6d?auto=format&fit=crop&w=2000&q=80"
       />
       <div className="mx-auto mt-20 max-w-7xl px-6 lg:px-10">
@@ -23,14 +23,14 @@ export default function About() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-serif-display text-4xl font-light leading-tight tracking-editorial text-[#17201b]">
-              Changing the way you wait.
+              A better way to wait for your flight.
             </h2>
             <div className="mt-8 space-y-6 text-lg leading-relaxed text-[#7b827b]">
               <p>
-                The idea for The Bamboo Tree was born out of countless exhausting layovers. We realized that travelers don't just need a place to sit—they need a place to breathe, rest, and reset their clocks.
+                We built The Bamboo Tree Transit Hotel because layovers can be very tiring. You need a good hotel near airport to sleep and relax. We wanted to make a place where you can easily rest before your next flight.
               </p>
               <p>
-                Located just 5 minutes from the airport, we created a space that feels worlds away from the terminal. By integrating natural elements, soundproofing, and intuitive service, we provide an oasis of calm before your next journey.
+                We are located just 5 minutes from the airport. We are a great hotel in airport area, near Negombo beach hotels and Seeduwa hotels. If you need an airport hotel international, we are here for you with clean rooms and nature.
               </p>
             </div>
             <div className="mt-12 grid gap-8 sm:grid-cols-3">
