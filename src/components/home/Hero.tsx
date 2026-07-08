@@ -10,8 +10,8 @@ export function Hero() {
   const [dates, setDates] = useState('')
 
   return (
-    <section className="relative min-h-screen w-full overflow-hidden px-4 pt-4 sm:px-6 sm:pt-6">
-      <div className="relative mx-auto flex min-h-[calc(100vh-2rem)] max-w-[1400px] flex-col overflow-hidden rounded-[2rem]">
+    <section className="relative min-h-[90vh] w-full overflow-hidden px-0 pt-0 lg:min-h-screen lg:px-6 lg:pt-6">
+      <div className="relative mx-auto flex min-h-[90vh] max-w-[1400px] flex-col overflow-hidden rounded-none lg:min-h-[calc(100vh-2rem)] lg:rounded-[2rem]">
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=2000&q=80"
@@ -32,17 +32,17 @@ export function Hero() {
           </motion.div>
         </div>
 
-        <div className="relative grid gap-8 px-6 pb-8 pt-32 lg:grid-cols-[1fr_auto] lg:items-end lg:px-12 lg:pb-12 lg:pt-0 lg:flex-1">
+        <div className="relative grid gap-5 px-5 pb-6 pt-24 lg:grid-cols-[1fr_auto] lg:gap-8 lg:items-end lg:px-12 lg:pb-12 lg:pt-0 lg:flex-1">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="flex flex-col items-start"
           >
-            <span className="mb-4 hidden rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-md sm:inline-flex lg:hidden">
+            <span className="mb-3 hidden rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-md sm:inline-flex lg:hidden">
               Bamboo Tree Transit Hotel
             </span>
-            <h1 className="text-left font-serif-display text-5xl font-light leading-[1.05] tracking-editorial text-white sm:text-6xl lg:text-7xl">
+            <h1 className="text-left font-serif-display text-4xl font-light leading-[1.05] tracking-editorial text-white sm:text-5xl lg:text-7xl">
               The Best Airport
               <br /> Transit Hotel
             </h1>
@@ -68,16 +68,16 @@ export function Hero() {
                 window.open(`https://wa.me/94767269361?text=${text}`, '_blank')
                 window.location.href = `mailto:info@thebambootree.lk?subject=Room Booking Inquiry&body=${decodeURIComponent(text)}`
               }}
-              className="w-full rounded-2xl border border-white/15 bg-black/40 p-5 backdrop-blur-xl"
+              className="w-full rounded-2xl border border-white/15 bg-black/40 p-4 backdrop-blur-xl lg:p-5"
             >
-              <div className="mb-3 flex items-center justify-between">
-                <p className="font-serif-display text-lg text-white">
+              <div className="mb-2 flex items-center justify-between">
+                <p className="font-serif-display text-base text-white lg:text-lg">
                   Book Your Room Today
                 </p>
                 <ArrowUpRightIcon className="h-4 w-4 text-white/60" />
               </div>
 
-              <div className="space-y-2.5">
+              <div className="space-y-2">
                 <WidgetField icon={UsersIcon}>
                   <select
                     aria-label="Guests and rooms"
@@ -107,7 +107,7 @@ export function Hero() {
 
               <button
                 type="submit"
-                className="mt-3 flex w-full items-center justify-center gap-2 rounded-xl bg-white py-3 text-sm font-medium text-[#17201b] transition-transform hover:-translate-y-0.5"
+                className="mt-3 flex w-full items-center justify-center gap-2 rounded-xl bg-white py-2.5 text-sm font-medium text-[#17201b] transition-transform hover:-translate-y-0.5 lg:py-3"
               >
                 Book Now <ArrowRightIcon className="h-4 w-4" />
               </button>
