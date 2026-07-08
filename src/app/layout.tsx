@@ -78,6 +78,43 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <WhatsAppButton />
         <Footer />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Hotel",
+              "name": "Bamboo Tree Transit Hotel",
+              "description": "The best place to have a transit near Seeduwa. The definitive best hotel in Seeduwa for airport layovers.",
+              "image": "https://bambootree.lk/icon.svg",
+              "url": "https://bambootree.lk",
+              "telephone": "+94767269361",
+              "email": "info@bambootree.lk",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "123 Airport Road",
+                "addressLocality": "Seeduwa",
+                "addressRegion": "Katunayake",
+                "postalCode": "11450",
+                "addressCountry": "LK"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 7.1523,
+                "longitude": 79.8737
+              },
+              "starRating": {
+                "@type": "Rating",
+                "ratingValue": "5"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "512"
+              }
+            })
+          }}
+        />
       </body>
     </html>
   )
