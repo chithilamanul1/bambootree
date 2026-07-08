@@ -15,6 +15,7 @@ interface ButtonAsButton extends BaseProps {
   href?: undefined
   onClick?: () => void
   type?: 'button' | 'submit'
+  disabled?: boolean
 }
 
 interface ButtonAsLink extends BaseProps {
@@ -24,7 +25,7 @@ interface ButtonAsLink extends BaseProps {
 type ButtonProps = ButtonAsButton | ButtonAsLink
 
 const base =
-  'inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-medium tracking-wide transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2e4a3f] focus-visible:ring-offset-2'
+  'inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-medium tracking-wide transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2e4a3f] focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:bg-auto'
 
 const variants: Record<Variant, string> = {
   primary:
@@ -48,9 +49,9 @@ export function Button(props: ButtonProps) {
     )
   }
 
-  const { onClick, type = 'button' } = props as ButtonAsButton
+  const { onClick, type = 'button', disabled } = props as ButtonAsButton
   return (
-    <button type={type} onClick={onClick} className={classes}>
+    <button type={type} onClick={onClick} disabled={disabled} className={classes}>
       {children}
     </button>
   )
