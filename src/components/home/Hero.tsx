@@ -21,35 +21,37 @@ export function Hero() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/25 to-black/70" />
         </div>
 
-        <div className="relative flex flex-1 flex-col items-start justify-center px-6 pt-32 pb-10 lg:items-center lg:pt-28 lg:pb-0">
-          <motion.h1
+        <div className="relative hidden flex-1 flex-col items-center justify-center pt-28 lg:flex">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            className="pointer-events-none select-none text-left font-serif-display text-[15vw] font-light leading-[0.9] tracking-editorial text-white/95 sm:text-[12vw] lg:text-center lg:text-[13rem]"
+            className="pointer-events-none select-none text-center font-serif-display text-[13rem] font-light leading-[0.9] tracking-editorial text-white/95"
           >
             Bamboo Tree
-          </motion.h1>
+          </motion.div>
         </div>
 
-        <div className="relative grid gap-8 px-6 pb-8 lg:grid-cols-[1fr_auto] lg:items-end lg:px-12 lg:pb-12">
+        <div className="relative grid gap-8 px-6 pb-8 pt-32 lg:grid-cols-[1fr_auto] lg:items-end lg:px-12 lg:pb-12 lg:pt-0 lg:flex-1">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="flex flex-col items-start"
           >
-            <h2 className="text-left font-serif-display text-4xl font-light leading-[1.1] tracking-editorial text-white sm:text-5xl lg:text-6xl">
+            <span className="mb-4 hidden rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-md sm:inline-flex lg:hidden">
+              Bamboo Tree Transit Hotel
+            </span>
+            <h1 className="text-left font-serif-display text-5xl font-light leading-[1.05] tracking-editorial text-white sm:text-6xl lg:text-7xl">
               The Best Airport
-              <br className="hidden sm:block" /> Transit Hotel
-            </h2>
-            <div className="mt-5 flex flex-wrap items-center gap-3 text-white/85">
-              <span className="flex items-center gap-1.5">
-                <StarIcon className="h-4 w-4 text-[#e2c56b]" fill="currentColor" strokeWidth={0} />
-                <span className="font-medium">4.9</span>
+              <br /> Transit Hotel
+            </h1>
+            <div className="mt-6 flex flex-wrap items-center gap-4 text-white/90">
+              <span className="flex items-center gap-1.5 rounded-full bg-black/30 px-3 py-1 backdrop-blur-md">
+                <StarIcon className="h-3.5 w-3.5 text-[#e2c56b]" fill="currentColor" strokeWidth={0} />
+                <span className="text-sm font-medium">4.9</span>
               </span>
-              <span className="h-4 w-px bg-white/30" />
-              <span className="text-sm">500+ Happy Travelers</span>
+              <span className="text-sm font-medium tracking-wide">500+ Happy Travelers</span>
             </div>
           </motion.div>
 
