@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #17201b;
+  --paper: #ffffff;
+  --paper-alt: #f4f4f1;
+  --ink: #17201b;
+  --ink-soft: #3a423c;
+  --muted: #7b827b;
+  --line: #e6e6e1;
+  --forest: #2e4a3f;
+  --forest-deep: #22382f;
+  --sage: #eef1ea;
+  --sage-line: #d6ddce;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif-display {
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+.tracking-editorial {
+  letter-spacing: -0.03em;
+}
+
+::selection {
+  background: var(--forest);
+  color: #fff;
+}

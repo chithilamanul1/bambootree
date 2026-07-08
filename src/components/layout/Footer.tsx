@@ -1,0 +1,85 @@
+import React from 'react'
+import Link from 'next/link'
+import { LeafIcon, MapPinIcon, PhoneIcon, MailIcon, PlaneIcon } from 'lucide-react'
+
+export function Footer() {
+  return (
+    <footer className="w-full bg-[#22382f] text-white">
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-4 lg:px-10">
+        <div className="lg:col-span-2">
+          <Link href="/" className="flex items-center gap-2.5">
+            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#2e4a3f]">
+              <LeafIcon className="h-4 w-4" />
+            </span>
+            <span className="font-serif-display text-xl tracking-editorial text-white">
+              The Bamboo Tree
+            </span>
+          </Link>
+          <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/70">
+            A calm, green transit hotel minutes from the airport — restful rooms
+            for travelers between journeys, and Blooms by Bamboo Tree for every
+            occasion.
+          </p>
+          <div className="mt-6 flex items-center gap-2 text-sm text-white/80">
+            <PlaneIcon className="h-4 w-4 text-[#a9c4b3]" />5 minutes from the
+            terminal · 24-hour reception
+          </div>
+        </div>
+
+        <div>
+          <h3 className="text-xs font-medium uppercase tracking-[0.25em] text-white/60">
+            Explore
+          </h3>
+          <ul className="mt-5 space-y-3 text-sm">
+            {[
+              { href: '/', label: 'Home' },
+              { href: '/about', label: 'About Us' },
+              { href: '/rooms', label: 'Rooms & Rates' },
+              { href: '/flowers', label: 'Blooms by Bamboo Tree' },
+              { href: '/contact', label: 'Contact' },
+            ].map((l) => (
+              <li key={l.href}>
+                <Link
+                  href={l.href}
+                  className="text-white/75 transition-colors hover:text-white"
+                >
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="text-xs font-medium uppercase tracking-[0.25em] text-white/60">
+            Get in touch
+          </h3>
+          <ul className="mt-5 space-y-3 text-sm text-white/75">
+            <li className="flex items-start gap-2.5">
+              <MapPinIcon className="mt-0.5 h-4 w-4 shrink-0 text-[#a9c4b3]" />
+              Airport Road, Katunayake, Sri Lanka
+            </li>
+            <li className="flex items-center gap-2.5">
+              <PhoneIcon className="h-4 w-4 shrink-0 text-[#a9c4b3]" />
+              +94 77 123 4567
+            </li>
+            <li className="flex items-center gap-2.5">
+              <MailIcon className="h-4 w-4 shrink-0 text-[#a9c4b3]" />
+              stay@bambootree.lk
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-white/10">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-6 text-xs text-white/50 sm:flex-row lg:px-10">
+          <p>
+            © {new Date().getFullYear()} The Bamboo Tree Transit Hotel. All
+            rights reserved.
+          </p>
+          <p>Secured with SSL · Rested, refreshed, ready.</p>
+        </div>
+      </div>
+    </footer>
+  )
+}
