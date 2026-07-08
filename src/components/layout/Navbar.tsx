@@ -8,11 +8,12 @@ import { MenuIcon, XIcon, LeafIcon, PhoneIcon } from 'lucide-react'
 import { Button } from '../ui/Button'
 
 const links = [
-  { href: '/', label: 'Home' },
-  { href: '/rooms', label: 'Rooms' },
-  { href: '/about', label: 'About' },
-  { href: '/flowers', label: 'Blooms' },
-  { href: '/contact', label: 'Contact' },
+  { label: 'Home', href: '/' },
+  { label: 'Rooms', href: '/rooms' },
+  { label: 'About', href: '/about' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Blooms', href: '/flowers' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 export function Navbar() {
