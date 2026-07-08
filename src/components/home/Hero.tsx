@@ -21,29 +21,29 @@ export function Hero() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/25 to-black/70" />
         </div>
 
-        <div className="relative flex flex-1 items-center justify-center px-4 pt-28">
+        <div className="relative flex flex-1 flex-col items-start justify-center px-6 pt-32 pb-10 lg:items-center lg:pt-28 lg:pb-0">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            className="pointer-events-none select-none text-center font-serif-display text-[16vw] font-light leading-none tracking-editorial text-white/95 lg:text-[13rem]"
+            className="pointer-events-none select-none text-left font-serif-display text-[15vw] font-light leading-[0.9] tracking-editorial text-white/95 sm:text-[12vw] lg:text-center lg:text-[13rem]"
           >
-            Bamboo&nbsp;Tree
+            Bamboo Tree
           </motion.h1>
         </div>
 
-        <div className="relative grid gap-6 px-6 pb-8 lg:grid-cols-[1fr_auto] lg:items-end lg:px-12 lg:pb-12">
+        <div className="relative grid gap-8 px-6 pb-8 lg:grid-cols-[1fr_auto] lg:items-end lg:px-12 lg:pb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
+            className="flex flex-col items-start"
           >
-            <h2 className="font-serif-display text-4xl font-light leading-[1.05] tracking-editorial text-white sm:text-5xl">
+            <h2 className="text-left font-serif-display text-4xl font-light leading-[1.1] tracking-editorial text-white sm:text-5xl lg:text-6xl">
               The Best Airport
-              <br />
-              Transit Hotel
+              <br className="hidden sm:block" /> Transit Hotel
             </h2>
-            <div className="mt-5 flex items-center gap-3 text-white/85">
+            <div className="mt-5 flex flex-wrap items-center gap-3 text-white/85">
               <span className="flex items-center gap-1.5">
                 <StarIcon className="h-4 w-4 text-[#e2c56b]" fill="currentColor" strokeWidth={0} />
                 <span className="font-medium">4.9</span>
@@ -58,7 +58,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.35 }}
             onSubmit={(e) => e.preventDefault()}
-            className="w-full rounded-2xl border border-white/15 bg-black/40 p-4 backdrop-blur-xl lg:w-[380px]"
+            className="w-full rounded-2xl border border-white/15 bg-black/40 p-5 backdrop-blur-xl lg:w-[380px]"
           >
             <div className="mb-3 flex items-center justify-between">
               <p className="font-serif-display text-lg text-white">
