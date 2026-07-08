@@ -5,7 +5,7 @@ import { LeafIcon, MapPinIcon, PhoneIcon, MailIcon, PlaneIcon } from 'lucide-rea
 export function Footer() {
   return (
     <footer className="w-full bg-[#22382f] text-white">
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-4 lg:px-10">
+      <div className="mx-auto grid max-w-7xl gap-8 px-6 py-12 lg:gap-12 lg:grid-cols-4 lg:px-10 lg:py-16">
         <div className="lg:col-span-2">
           <Link href="/" className="flex items-center gap-2.5">
             <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#2e4a3f]">
@@ -57,7 +57,7 @@ export function Footer() {
           <ul className="mt-5 space-y-3 text-sm text-white/75">
             <li className="flex items-start gap-2.5">
               <MapPinIcon className="mt-0.5 h-4 w-4 shrink-0 text-[#a9c4b3]" />
-              Airport Road, Katunayake, Sri Lanka
+              190, Colombo Road .Seeduwa
             </li>
             <li className="flex items-center gap-2.5">
               <PhoneIcon className="h-4 w-4 shrink-0 text-[#a9c4b3]" />

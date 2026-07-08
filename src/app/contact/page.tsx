@@ -37,7 +37,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-serif-display text-xl text-[#17201b]">Address</h3>
-                  <p className="mt-1 text-[#7b827b]">123 Airport Road<br />Katunayake, Sri Lanka</p>
+                  <p className="mt-1 text-[#7b827b]">190, Colombo Road .Seeduwa</p>
                 </div>
               </div>
               <div className="flex gap-4">

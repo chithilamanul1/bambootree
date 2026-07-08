@@ -32,15 +32,15 @@ export function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section className="w-full bg-[#f4f4f1] py-24">
+    <section className="w-full bg-[#f4f4f1] py-16 lg:py-24">
       <div className="mx-auto max-w-4xl px-6 lg:px-10">
         <div className="text-center">
           <SectionLabel>Common Questions</SectionLabel>
-          <h2 className="mt-5 font-serif-display text-3xl font-light leading-tight tracking-editorial text-[#17201b] sm:text-4xl">
+          <h2 className="mt-4 font-serif-display text-2xl font-light leading-tight tracking-editorial text-[#17201b] sm:text-3xl lg:mt-5 lg:text-4xl">
             Frequently Asked Questions
           </h2>
         </div>
-        <div className="mt-14 space-y-4">
+        <div className="mt-8 space-y-4 lg:mt-14">
           {faqs.map((faq, i) => (
             <div
               key={i}

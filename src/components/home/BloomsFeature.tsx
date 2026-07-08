@@ -7,8 +7,8 @@ import { Button } from '../ui/Button'
 
 export function BloomsFeature() {
   return (
-    <section className="w-full bg-[#f4f4f1] py-24">
-      <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2 lg:px-10">
+    <section className="w-full bg-[#f4f4f1] py-16 lg:py-24">
+      <div className="mx-auto grid max-w-7xl items-center gap-8 px-6 lg:grid-cols-2 lg:gap-12 lg:px-10">
         <motion.div
           initial={{ opacity: 0, x: -24 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -39,10 +39,10 @@ export function BloomsFeature() {
           <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.25em] text-[#2e4a3f]">
             <FlowerIcon className="h-4 w-4" /> Our plant shop
           </span>
-          <h2 className="mt-5 font-serif-display text-3xl font-light leading-tight tracking-editorial text-[#17201b] sm:text-4xl">
+          <h2 className="mt-4 font-serif-display text-2xl font-light leading-tight tracking-editorial text-[#17201b] sm:text-3xl lg:mt-5 lg:text-4xl">
             Beautiful flower plants for your home and garden.
           </h2>
-          <p className="mt-5 max-w-md text-lg leading-relaxed text-[#7b827b]">
+          <p className="mt-4 max-w-md text-base leading-relaxed text-[#7b827b] lg:mt-5 lg:text-lg">
             Blooms by Bamboo Tree is our in-house plant shop. From beautiful 
             blooming orchids to lush green foliage, we bring the same care for 
             nature into every plant we offer.

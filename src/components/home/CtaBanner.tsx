@@ -7,7 +7,7 @@ import { Button } from '../ui/Button'
 
 export function CtaBanner() {
   return (
-    <section className="w-full bg-white px-6 pb-24 lg:px-10">
+    <section className="w-full bg-white px-6 pb-16 lg:pb-24 lg:px-10">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -21,7 +21,7 @@ export function CtaBanner() {
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-black/55" />
-        <div className="relative px-8 py-20 text-center sm:px-16">
+        <div className="relative px-6 py-16 text-center sm:px-16 lg:py-20">
           <h2 className="mx-auto max-w-2xl font-serif-display text-3xl font-light leading-tight tracking-editorial text-white sm:text-5xl">
             Your next flight can wait. Rest first.
           </h2>

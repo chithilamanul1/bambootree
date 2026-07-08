@@ -13,15 +13,15 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="w-full bg-white py-24">
+    <section className="w-full bg-white py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="max-w-2xl">
           <SectionLabel>Happy Guests</SectionLabel>
-          <h2 className="mt-5 font-serif-display text-3xl font-light leading-tight tracking-editorial text-[#17201b] sm:text-4xl">
+          <h2 className="mt-4 font-serif-display text-2xl font-light leading-tight tracking-editorial text-[#17201b] sm:text-3xl lg:mt-5 lg:text-4xl">
             Top hotel near airport for travelers.
           </h2>
         </div>
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-8 grid gap-4 md:grid-cols-3 lg:mt-14 lg:gap-6">
           {testimonials.map((t, i) => (
             <motion.figure
               key={t.name}
@@ -29,7 +29,7 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="flex flex-col rounded-3xl border border-[#e6e6e1] bg-[#f4f4f1] p-8"
+              className="flex flex-col rounded-2xl border border-[#e6e6e1] bg-[#f4f4f1] p-6 lg:rounded-3xl lg:p-8"
             >
               <div className="flex gap-1 text-[#e2c56b]">
                 {Array.from({ length: 5 }).map((_, s) => (

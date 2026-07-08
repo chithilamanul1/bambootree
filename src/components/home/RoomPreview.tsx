@@ -14,22 +14,22 @@ const rooms = [
 
 export function RoomPreview() {
   return (
-    <section className="w-full bg-white pb-24">
+    <section className="w-full bg-white pb-16 lg:pb-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="flex flex-wrap items-end justify-between gap-6">
+        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end lg:gap-6">
           <div className="max-w-xl">
-            <h2 className="font-serif-display text-3xl font-light tracking-editorial text-[#17201b] sm:text-4xl">
+            <h2 className="font-serif-display text-2xl font-light tracking-editorial text-[#17201b] sm:text-3xl lg:text-4xl">
               Best Hotel Rooms Near Airport
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-[#7b827b]">
               From quick transit rooms to nightly stays, we have the best airport accommodation for you.
             </p>
           </div>
-          <Button href="/rooms" variant="outline">
-            See all <ArrowRightIcon className="h-4 w-4" />
+          <Button href="/rooms" variant="outline" className="w-full sm:w-auto">
+            See all <ArrowRightIcon className="h-4 w-4 ml-2" />
           </Button>
         </div>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:mt-12 lg:gap-5 lg:grid-cols-4">
           {rooms.map((r, i) => (
             <motion.div
               key={r.name}
