@@ -93,12 +93,12 @@ export function Navbar() {
 
         <div className="hidden items-center gap-5 lg:flex">
           <a
-            href="tel:+94771234567"
+            href="tel:+94767269361"
             className={`flex items-center gap-2 text-sm ${
               overlay ? 'text-white/80' : 'text-[#7b827b]'
             }`}
           >
-            <PhoneIcon className="h-4 w-4" /> +94 77 123 4567
+            <PhoneIcon className="h-4 w-4" /> +94 76 726 9361
           </a>
           <Button href="/rooms" variant={overlay ? 'light' : 'primary'}>
             Book your stay

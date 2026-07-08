@@ -61,11 +61,11 @@ export function Footer() {
             </li>
             <li className="flex items-center gap-2.5">
               <PhoneIcon className="h-4 w-4 shrink-0 text-[#a9c4b3]" />
-              +94 77 123 4567
+              +94 76 726 9361 / +94 72 171 9490
             </li>
             <li className="flex items-center gap-2.5">
               <MailIcon className="h-4 w-4 shrink-0 text-[#a9c4b3]" />
-              stay@bambootree.lk
+              info@bambootree.lk
             </li>
           </ul>
         </div>

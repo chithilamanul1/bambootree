@@ -46,7 +46,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-serif-display text-xl text-[#17201b]">Phone & WhatsApp</h3>
-                  <p className="mt-1 text-[#7b827b]">+94 77 123 4567</p>
+                  <p className="mt-1 text-[#7b827b]">+94 76 726 9361<br />+94 72 171 9490</p>
                 </div>
               </div>
               <div className="flex gap-4">
@@ -55,7 +55,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-serif-display text-xl text-[#17201b]">Email</h3>
-                  <p className="mt-1 text-[#7b827b]">stay@bambootree.lk</p>
+                  <p className="mt-1 text-[#7b827b]">info@bambootree.lk</p>
                 </div>
               </div>
               <div className="flex gap-4">
