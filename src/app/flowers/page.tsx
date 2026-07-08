@@ -6,28 +6,28 @@ import { motion } from 'framer-motion'
 
 const catalog = [
   {
-    name: 'The Welcome Bouquet',
+    name: 'Blooming Orchid',
     price: '$45',
-    desc: 'A bright mix of local tropicals, perfect for greeting someone at arrivals.',
-    img: 'https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&w=800&q=80',
+    desc: 'A beautiful blooming orchid plant, perfect for your indoor space.',
+    img: 'https://images.unsplash.com/photo-1597848212624-a19eb35e2651?auto=format&fit=crop&w=800&q=80',
   },
   {
-    name: 'Serenity Arrangement',
+    name: 'Peace Lily Plant',
     price: '$65',
-    desc: 'Calm whites and greens in a low vase. Ideal for a hotel room or small event.',
-    img: 'https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=800&q=80',
+    desc: 'A beautiful Peace Lily with calm whites and greens. Ideal for a bedroom or living room.',
+    img: 'https://images.unsplash.com/photo-1593696954577-16d80d19bd08?auto=format&fit=crop&w=800&q=80',
   },
   {
-    name: 'Anniversary Roses',
+    name: 'Potted Rose Plant',
     price: '$85',
-    desc: 'Classic deep red roses intertwined with eucalyptus and baby\'s breath.',
-    img: 'https://images.unsplash.com/photo-1548842183-f22292f76db3?auto=format&fit=crop&w=800&q=80',
+    desc: 'Classic deep red rose plant, ready to bloom beautifully in your garden.',
+    img: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=800&q=80',
   },
   {
-    name: 'Event Centerpiece',
-    price: 'Custom',
-    desc: 'Bespoke floral styling for corporate events or small weddings.',
-    img: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80',
+    name: 'Tropical Hibiscus',
+    price: '$35',
+    desc: 'A vibrant tropical hibiscus plant to bring color to your outdoor space.',
+    img: 'https://images.unsplash.com/photo-1590409386377-6d601b4c3df7?auto=format&fit=crop&w=800&q=80',
   },
 ]
 
@@ -37,12 +37,12 @@ export default function FlowerShop() {
       <PageHeader
         label="Our Atelier"
         title="Blooms by Bamboo Tree"
-        description="Freshly cut, beautifully arranged. For arrivals, apologies, and everything in between."
+        description="Beautifully potted and cared for. Perfect for your home, garden, or as a gift."
         image="https://images.unsplash.com/photo-1463043254199-7a3efd782ad1?auto=format&fit=crop&w=2000&q=80"
       />
       <div className="mx-auto mt-20 max-w-7xl px-6 lg:px-10">
         <div className="text-center">
-          <h2 className="font-serif-display text-3xl text-[#17201b]">Floral Catalog</h2>
+          <h2 className="font-serif-display text-3xl text-[#17201b]">Plant Catalog</h2>
           <p className="mt-2 text-[#7b827b]">Order online or visit our lobby shop.</p>
         </div>
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

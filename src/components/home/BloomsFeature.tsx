@@ -18,8 +18,8 @@ export function BloomsFeature() {
         >
           <div className="overflow-hidden rounded-[2rem]">
             <img
-              src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&w=1400&q=80"
-              alt="Fresh floral arrangement from Blooms by Bamboo Tree"
+              src="https://images.unsplash.com/photo-1597848212624-a19eb35e2651?auto=format&fit=crop&w=1400&q=80"
+              alt="Fresh flower plant from Blooms by Bamboo Tree"
               className="h-[460px] w-full object-cover"
             />
           </div>
@@ -37,15 +37,15 @@ export function BloomsFeature() {
           className="order-1 lg:order-2"
         >
           <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.25em] text-[#2e4a3f]">
-            <FlowerIcon className="h-4 w-4" /> Our flower atelier
+            <FlowerIcon className="h-4 w-4" /> Our plant shop
           </span>
           <h2 className="mt-5 font-serif-display text-3xl font-light leading-tight tracking-editorial text-[#17201b] sm:text-4xl">
-            Flowers for weddings, events &amp; every welcome.
+            Beautiful flower plants for your home and garden.
           </h2>
           <p className="mt-5 max-w-md text-lg leading-relaxed text-[#7b827b]">
-            Blooms by Bamboo Tree is our in-house floral studio. From hand-tied
-            bouquets to full event styling, we bring the same care for nature
-            into every arrangement.
+            Blooms by Bamboo Tree is our in-house plant shop. From beautiful 
+            blooming orchids to lush green foliage, we bring the same care for 
+            nature into every plant we offer.
           </p>
           <div className="mt-8">
             <Button href="/flowers" variant="primary">
