@@ -55,65 +55,85 @@ export function Hero() {
             </div>
           </motion.div>
 
-          <motion.form
+          <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.35 }}
-            onSubmit={(e) => e.preventDefault()}
-            className="w-full rounded-2xl border border-white/15 bg-black/40 p-5 backdrop-blur-xl lg:w-[380px]"
+            className="w-full lg:w-[380px]"
           >
-            <div className="mb-3 flex items-center justify-between">
-              <p className="font-serif-display text-lg text-white">
-                Find Your Airport Layover Hotel
-              </p>
-              <ArrowUpRightIcon className="h-4 w-4 text-white/60" />
-            </div>
-
-            <div className="space-y-2.5">
-              <WidgetField icon={MapPinIcon}>
-                <input
-                  aria-label="Find location"
-                  value={location}
-                  onChange={(e) => setLocation(e.target.value)}
-                  placeholder="Find location"
-                  className="w-full bg-transparent text-sm text-white placeholder-white/50 focus:outline-none"
-                />
-              </WidgetField>
-
-              <WidgetField icon={UsersIcon}>
-                <select
-                  aria-label="Guests and rooms"
-                  value={guests}
-                  onChange={(e) => setGuests(e.target.value)}
-                  className="w-full bg-transparent text-sm text-white focus:outline-none [&>option]:text-[#17201b]"
-                >
-                  <option>1 Guest, 1 Room</option>
-                  <option>2 Guests, 1 Room</option>
-                  <option>2 Guests, 2 Rooms</option>
-                  <option>4 Guests, 2 Rooms</option>
-                </select>
-              </WidgetField>
-
-              <WidgetField icon={CalendarIcon}>
-                <input
-                  aria-label="Check-in and check-out dates"
-                  value={dates}
-                  onChange={(e) => setDates(e.target.value)}
-                  onFocus={(e) => (e.target.type = 'date')}
-                  onBlur={(e) => { if (!e.target.value) e.target.type = 'text' }}
-                  placeholder="Add dates"
-                  className="w-full bg-transparent text-sm text-white placeholder-white/50 focus:outline-none"
-                />
-              </WidgetField>
-            </div>
-
-            <button
-              type="submit"
-              className="mt-3 flex w-full items-center justify-center gap-2 rounded-xl bg-white py-3 text-sm font-medium text-[#17201b] transition-transform hover:-translate-y-0.5"
+            <form
+              onSubmit={(e) => {
+                e.preventDefault()
+                const text = `Hello Bamboo Tree! I would like to book a room.%0A%0A*Guests:* ${guests}%0A*Dates:* ${dates || 'Not selected'}`
+                window.open(`https://wa.me/94767269361?text=${text}`, '_blank')
+                window.location.href = `mailto:info@thebambootree.lk?subject=Room Booking Inquiry&body=${decodeURIComponent(text)}`
+              }}
+              className="w-full rounded-2xl border border-white/15 bg-black/40 p-5 backdrop-blur-xl"
             >
-              Search <ArrowRightIcon className="h-4 w-4" />
-            </button>
-          </motion.form>
+              <div className="mb-3 flex items-center justify-between">
+                <p className="font-serif-display text-lg text-white">
+                  Book Your Room Today
+                </p>
+                <ArrowUpRightIcon className="h-4 w-4 text-white/60" />
+              </div>
+
+              <div className="space-y-2.5">
+                <WidgetField icon={UsersIcon}>
+                  <select
+                    aria-label="Guests and rooms"
+                    value={guests}
+                    onChange={(e) => setGuests(e.target.value)}
+                    className="w-full bg-transparent text-sm text-white focus:outline-none [&>option]:text-[#17201b]"
+                  >
+                    <option>1 Guest, 1 Room</option>
+                    <option>2 Guests, 1 Room</option>
+                    <option>2 Guests, 2 Rooms</option>
+                    <option>4 Guests, 2 Rooms</option>
+                  </select>
+                </WidgetField>
+
+                <WidgetField icon={CalendarIcon}>
+                  <input
+                    aria-label="Check-in and check-out dates"
+                    value={dates}
+                    onChange={(e) => setDates(e.target.value)}
+                    onFocus={(e) => (e.target.type = 'date')}
+                    onBlur={(e) => { if (!e.target.value) e.target.type = 'text' }}
+                    placeholder="Add dates"
+                    className="w-full bg-transparent text-sm text-white placeholder-white/50 focus:outline-none"
+                  />
+                </WidgetField>
+              </div>
+
+              <button
+                type="submit"
+                className="mt-3 flex w-full items-center justify-center gap-2 rounded-xl bg-white py-3 text-sm font-medium text-[#17201b] transition-transform hover:-translate-y-0.5"
+              >
+                Book Now <ArrowRightIcon className="h-4 w-4" />
+              </button>
+            </form>
+
+            <div className="mt-4 flex items-center justify-center gap-4 text-sm text-white/70">
+              <span>Or book on:</span>
+              <a
+                href="https://www.booking.com/hotel/lk/the-bamboo-tree-transit.html"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-white hover:underline transition-colors"
+              >
+                Booking.com
+              </a>
+              <span className="h-1 w-1 rounded-full bg-white/30" />
+              <a
+                href="https://www.google.com/travel/hotels/entity/CgsIo8a3ltO5oOXrARAB?hl=en-LK&gl=lk"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-white hover:underline transition-colors"
+              >
+                Google
+              </a>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
