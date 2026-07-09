@@ -1,13 +1,20 @@
 'use client'
 
-import React, { useState, ComponentType } from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { StarIcon, MapPinIcon, UsersIcon, CalendarIcon, ArrowRightIcon, ArrowUpRightIcon } from 'lucide-react'
+import { StarIcon, UsersIcon, CalendarIcon, HomeIcon } from 'lucide-react'
 
 export function Hero() {
-  const [location, setLocation] = useState('')
-  const [guests, setGuests] = useState('1 Guest, 1 Room')
   const [dates, setDates] = useState('')
+  const [guests, setGuests] = useState('1')
+  const [rooms, setRooms] = useState(1)
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault()
+    const text = `Hello Bamboo Tree! I would like to book.%0A%0A*Dates:* ${dates || 'Not selected'}%0A*Guests:* ${guests} Adults/Children%0A*Rooms:* ${rooms}`
+    window.open(`https://wa.me/94767269361?text=${text}`, '_blank')
+    window.location.href = `mailto:info@thebambootree.lk?subject=Room Booking Inquiry&body=${decodeURIComponent(text)}`
+  }
 
   return (
     <section className="relative min-h-[90vh] w-full overflow-hidden px-0 pt-0 lg:min-h-screen lg:px-6 lg:pt-6">
@@ -32,7 +39,7 @@ export function Hero() {
           </motion.div>
         </div>
 
-        <div className="relative grid gap-5 px-5 pb-6 pt-24 lg:grid-cols-[1fr_auto] lg:gap-8 lg:items-end lg:px-12 lg:pb-12 lg:pt-0 lg:flex-1">
+        <div className="relative flex w-full flex-col justify-end gap-10 px-5 pb-12 pt-24 lg:px-12 lg:pb-16 lg:pt-0 lg:flex-1">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -59,61 +66,72 @@ export function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.35 }}
-            className="w-full lg:w-[380px]"
+            className="w-full max-w-5xl"
           >
+            <p className="mb-3 text-sm font-medium text-white drop-shadow-md">
+              Reserve your room by just few clicks !
+            </p>
             <form
-              onSubmit={(e) => {
-                e.preventDefault()
-                const text = `Hello Bamboo Tree! I would like to book a room.%0A%0A*Guests:* ${guests}%0A*Dates:* ${dates || 'Not selected'}`
-                window.open(`https://wa.me/94767269361?text=${text}`, '_blank')
-                window.location.href = `mailto:info@thebambootree.lk?subject=Room Booking Inquiry&body=${decodeURIComponent(text)}`
-              }}
-              className="w-full rounded-3xl border border-white/20 bg-white/10 p-5 shadow-[0_8px_32px_rgba(0,0,0,0.3)] backdrop-blur-2xl lg:p-7"
+              onSubmit={handleSearch}
+              className="flex w-full flex-col items-stretch overflow-hidden rounded-xl bg-white shadow-2xl md:flex-row md:items-center"
             >
-              <div className="mb-5 flex items-center justify-between">
-                <p className="font-serif-display text-xl text-white lg:text-2xl font-light">
-                  Reserve Your Stay
-                </p>
-                <ArrowUpRightIcon className="h-5 w-5 text-white/80" />
+              {/* Date / Time */}
+              <div className="flex flex-1 items-center gap-3 border-b border-gray-200 px-4 py-3 md:border-b-0 md:border-r">
+                <CalendarIcon className="h-6 w-6 text-gray-300 shrink-0" />
+                <input
+                  type="text"
+                  value={dates}
+                  onChange={(e) => setDates(e.target.value)}
+                  onFocus={(e) => (e.target.type = 'date')}
+                  onBlur={(e) => { if (!e.target.value) e.target.type = 'text' }}
+                  placeholder="Date / Time"
+                  className="w-full bg-transparent text-sm font-medium text-[#006085] placeholder-[#006085] focus:outline-none"
+                />
               </div>
 
-              <div className="space-y-3">
-                <WidgetField icon={UsersIcon}>
-                  <select
-                    aria-label="Guests and rooms"
-                    value={guests}
-                    onChange={(e) => setGuests(e.target.value)}
-                    className="w-full bg-transparent text-base font-medium text-white focus:outline-none cursor-pointer [&>option]:text-[#17201b]"
-                  >
-                    <option>1 Guest, 1 Room</option>
-                    <option>2 Guests, 1 Room</option>
-                    <option>2 Guests, 2 Rooms</option>
-                    <option>4 Guests, 2 Rooms</option>
-                  </select>
-                </WidgetField>
+              {/* Adults / Children */}
+              <div className="flex flex-1 items-center gap-3 border-b border-gray-200 px-4 py-3 md:border-b-0 md:border-r">
+                <UsersIcon className="h-6 w-6 text-gray-300 shrink-0" />
+                <select
+                  value={guests}
+                  onChange={(e) => setGuests(e.target.value)}
+                  className="w-full bg-transparent text-sm font-medium text-[#006085] focus:outline-none cursor-pointer appearance-none"
+                >
+                  <option value="1">1 Adult</option>
+                  <option value="2">2 Adults</option>
+                  <option value="3">2 Adults, 1 Child</option>
+                  <option value="4">2 Adults, 2 Children</option>
+                </select>
+              </div>
 
-                <WidgetField icon={CalendarIcon}>
+              {/* Rooms */}
+              <div className="flex w-full md:w-auto min-w-[140px] items-center justify-between border-b border-gray-200 px-4 py-3 md:border-b-0 md:border-r">
+                <div className="flex items-center gap-3">
+                  <HomeIcon className="h-6 w-6 text-gray-300 shrink-0" />
+                  <span className="text-sm font-medium text-[#006085]">Rooms</span>
+                </div>
+                <div className="flex items-center">
                   <input
-                    aria-label="Check-in and check-out dates"
-                    value={dates}
-                    onChange={(e) => setDates(e.target.value)}
-                    onFocus={(e) => (e.target.type = 'date')}
-                    onBlur={(e) => { if (!e.target.value) e.target.type = 'text' }}
-                    placeholder="Check-in - Check-out"
-                    className="w-full bg-transparent text-base font-medium text-white placeholder-white/70 focus:outline-none"
+                    type="number"
+                    min="1"
+                    max="10"
+                    value={rooms}
+                    onChange={(e) => setRooms(parseInt(e.target.value) || 1)}
+                    className="w-12 rounded border border-gray-300 px-2 py-1 text-center text-sm font-medium text-[#006085] focus:border-[#0082a9] focus:outline-none ml-2"
                   />
-                </WidgetField>
+                </div>
               </div>
 
+              {/* Search Button */}
               <button
                 type="submit"
-                className="mt-5 flex w-full items-center justify-center gap-2 rounded-full bg-white py-3.5 text-lg font-semibold text-[#17201b] transition-transform hover:-translate-y-1 hover:shadow-lg hover:shadow-white/20"
+                className="flex w-full md:w-auto md:min-w-[160px] items-center justify-center bg-[#008ba8] px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-[#00748d]"
               >
-                Book Now <ArrowRightIcon className="h-5 w-5" />
+                Search
               </button>
             </form>
 
-            <div className="mt-6 flex items-center justify-center gap-4 text-sm font-medium text-white shadow-black drop-shadow-md">
+            <div className="mt-5 flex items-center gap-4 text-sm font-medium text-white shadow-black drop-shadow-md">
               <span>Or book on:</span>
               <a
                 href="https://www.booking.com/hotel/lk/the-bamboo-tree-transit.html"
@@ -137,20 +155,5 @@ export function Hero() {
         </div>
       </div>
     </section>
-  )
-}
-
-function WidgetField({
-  icon: Icon,
-  children,
-}: {
-  icon: ComponentType<{ className?: string }>
-  children: React.ReactNode
-}) {
-  return (
-    <div className="flex items-center gap-3 rounded-2xl border border-white/20 bg-black/20 px-4 py-3.5 backdrop-blur-md focus-within:border-white/50 transition-colors">
-      <Icon className="h-5 w-5 shrink-0 text-white/80" />
-      {children}
-    </div>
   )
 }
