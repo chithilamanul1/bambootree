@@ -34,15 +34,15 @@ export function Navbar() {
     setOpen(false)
   }, [pathname])
 
-  const textColor = overlay ? 'text-white' : 'text-[#17201b]'
-  const subColor = overlay ? 'text-white/70' : 'text-[#7b827b]'
+  const textColor = overlay ? 'text-white' : 'text-[var(--ink)]'
+  const subColor = overlay ? 'text-white/70' : 'text-[var(--muted)]'
 
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         overlay
           ? 'bg-transparent'
-          : 'border-b border-[#e6e6e1] bg-white/90 backdrop-blur-md'
+          : 'border-b border-[var(--line)] bg-[var(--paper)]/90 backdrop-blur-md'
       }`}
     >
       <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
@@ -79,8 +79,8 @@ export function Navbar() {
                         ? 'text-white'
                         : 'text-white/70 hover:text-white'
                       : isActive
-                        ? 'text-[#2e4a3f]'
-                        : 'text-[#7b827b] hover:text-[#17201b]'
+                        ? 'text-[var(--forest)]'
+                        : 'text-[var(--muted)] hover:text-[var(--ink)]'
                   }`}
                 >
                   {l.label}
@@ -94,7 +94,7 @@ export function Navbar() {
           <a
             href="tel:+94767269361"
             className={`flex items-center gap-2 text-sm ${
-              overlay ? 'text-white/80' : 'text-[#7b827b]'
+              overlay ? 'text-white/80' : 'text-[var(--muted)]'
             }`}
           >
             <PhoneIcon className="h-4 w-4" /> +94 76 726 9361
@@ -121,7 +121,7 @@ export function Navbar() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="overflow-hidden border-t border-[#e6e6e1] bg-white lg:hidden"
+            className="overflow-hidden border-t border-[var(--line)] bg-[var(--paper)] lg:hidden"
           >
             <ul className="flex flex-col gap-1 px-6 py-4">
               {links.map((l) => {
@@ -132,8 +132,8 @@ export function Navbar() {
                       href={l.href}
                       className={`block rounded-lg px-3 py-3 text-base transition-colors ${
                         isActive
-                          ? 'bg-[#eef1ea] text-[#2e4a3f]'
-                          : 'text-[#3a423c] hover:bg-[#f4f4f1]'
+                          ? 'bg-[var(--sage)] text-[var(--forest)]'
+                          : 'text-[var(--ink-soft)] hover:bg-[var(--paper-alt)]'
                       }`}
                     >
                       {l.label}

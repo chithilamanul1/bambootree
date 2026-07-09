@@ -33,7 +33,7 @@ const catalog = [
 
 export default function FlowerShop() {
   return (
-    <div className="w-full bg-white pb-24">
+    <div className="w-full bg-[var(--paper)] pb-24">
       <PageHeader
         label="Our Atelier"
         title="Blooms by Bamboo Tree"
@@ -42,8 +42,8 @@ export default function FlowerShop() {
       />
       <div className="mx-auto mt-20 max-w-7xl px-6 lg:px-10">
         <div className="text-center">
-          <h2 className="font-serif-display text-3xl text-[#17201b]">Plant Catalog</h2>
-          <p className="mt-2 text-[#7b827b]">Order online or visit our lobby shop.</p>
+          <h2 className="font-serif-display text-3xl text-[var(--ink)]">Plant Catalog</h2>
+          <p className="mt-2 text-[var(--muted)]">Order online or visit our lobby shop.</p>
         </div>
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {catalog.map((item, idx) => (
@@ -63,10 +63,10 @@ export default function FlowerShop() {
                 />
               </div>
               <div className="mt-4 flex justify-between gap-4">
-                <h3 className="font-serif-display text-xl text-[#17201b]">{item.name}</h3>
-                <span className="font-medium text-[#2e4a3f]">{item.price}</span>
+                <h3 className="font-serif-display text-xl text-[var(--ink)]">{item.name}</h3>
+                <span className="font-medium text-[var(--forest)]">{item.price}</span>
               </div>
-              <p className="mt-2 text-sm text-[#7b827b]">{item.desc}</p>
+              <p className="mt-2 text-sm text-[var(--muted)]">{item.desc}</p>
             </motion.div>
           ))}
         </div>

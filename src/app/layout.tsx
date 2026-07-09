@@ -59,10 +59,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'The Bamboo Tree | Airport Transit Hotel',
     description: 'A calm, green transit hotel minutes from the airport — restful rooms for travelers between journeys.',
-    url: 'https://bambootree.lk',
+    url: 'https://bambootree.vercel.app',
     siteName: 'Bamboo Tree Hotel',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&h=630&q=80',
+        width: 1200,
+        height: 630,
+        alt: 'Misty bamboo forest near The Bamboo Tree Transit Hotel',
+      }
+    ],
   },
 }
 
@@ -92,9 +100,9 @@ export default function RootLayout({
               "email": "info@bambootree.lk",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "123 Airport Road",
+                "streetAddress": "190 Colombo Road",
                 "addressLocality": "Seeduwa",
-                "addressRegion": "Katunayake",
+                "addressRegion": "Western Province",
                 "postalCode": "11450",
                 "addressCountry": "LK"
               },

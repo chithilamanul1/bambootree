@@ -32,11 +32,11 @@ export function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section className="w-full bg-[#f4f4f1] py-16 lg:py-24">
+    <section className="w-full bg-[var(--paper-alt)] py-16 lg:py-24">
       <div className="mx-auto max-w-4xl px-6 lg:px-10">
         <div className="text-center">
           <SectionLabel>Common Questions</SectionLabel>
-          <h2 className="mt-4 font-serif-display text-2xl font-light leading-tight tracking-editorial text-[#17201b] sm:text-3xl lg:mt-5 lg:text-4xl">
+          <h2 className="mt-4 font-serif-display text-2xl font-light leading-tight tracking-editorial text-[var(--ink)] sm:text-3xl lg:mt-5 lg:text-4xl">
             Frequently Asked Questions
           </h2>
         </div>
@@ -44,15 +44,15 @@ export function Faq() {
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className="overflow-hidden rounded-2xl border border-[#e6e6e1] bg-white transition-shadow hover:shadow-sm"
+              className="overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--paper)] transition-shadow hover:shadow-sm"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="flex w-full items-center justify-between px-6 py-5 text-left focus:outline-none"
               >
-                <span className="font-serif-display text-lg text-[#17201b]">{faq.q}</span>
+                <span className="font-serif-display text-lg text-[var(--ink)]">{faq.q}</span>
                 <ChevronDownIcon
-                  className={`h-5 w-5 text-[#2e4a3f] transition-transform duration-300 ${
+                  className={`h-5 w-5 text-[var(--forest)] transition-transform duration-300 ${
                     openIndex === i ? 'rotate-180' : ''
                   }`}
                 />
@@ -65,7 +65,7 @@ export function Faq() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="px-6 pb-6 text-[#7b827b]">
+                    <div className="px-6 pb-6 text-[var(--muted)]">
                       {faq.a}
                     </div>
                   </motion.div>

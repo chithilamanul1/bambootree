@@ -11,8 +11,8 @@ export function SectionLabel({
   className = '',
   tone = 'dark',
 }: SectionLabelProps) {
-  const color = tone === 'light' ? 'text-white/80' : 'text-[#7b827b]'
-  const dot = tone === 'light' ? 'bg-white/70' : 'bg-[#2e4a3f]'
+  const color = tone === 'light' ? 'text-white/80' : 'text-[var(--muted)]'
+  const dot = tone === 'light' ? 'bg-white/70' : 'bg-[var(--forest)]'
   return (
     <span
       className={`inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.25em] ${color} ${className}`}

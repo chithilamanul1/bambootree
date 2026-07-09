@@ -51,7 +51,7 @@ const rooms = [
 
 export default function Rooms() {
   return (
-    <div className="w-full bg-[#f4f4f1] pb-24">
+    <div className="w-full bg-[var(--paper-alt)] pb-24">
       <PageHeader
         label="Hotel Rooms Airport"
         title="Rooms & Prices"
@@ -67,7 +67,7 @@ export default function Rooms() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="flex flex-col overflow-hidden rounded-3xl bg-white shadow-sm lg:flex-row"
+              className="flex flex-col overflow-hidden rounded-3xl bg-[var(--paper)] border border-[var(--line)] shadow-sm lg:flex-row"
             >
               <div className="relative h-64 w-full lg:h-auto lg:w-[45%]">
                 <img
@@ -79,33 +79,33 @@ export default function Rooms() {
               <div className="flex flex-1 flex-col p-8 lg:p-12">
                 <div className="flex flex-wrap items-start justify-between gap-4">
                   <div>
-                    <span className="text-xs font-semibold uppercase tracking-widest text-[#7b827b]">
+                    <span className="text-xs font-semibold uppercase tracking-widest text-[var(--muted)]">
                       {room.type}
                     </span>
-                    <h2 className="mt-2 font-serif-display text-3xl text-[#17201b]">
+                    <h2 className="mt-2 font-serif-display text-3xl text-[var(--ink)]">
                       {room.name}
                     </h2>
                   </div>
                   <div className="text-right">
-                    <p className="font-serif-display text-2xl text-[#2e4a3f]">{room.price}</p>
+                    <p className="font-serif-display text-2xl text-[var(--forest)]">{room.price}</p>
                   </div>
                 </div>
-                <p className="mt-6 text-base leading-relaxed text-[#7b827b]">
+                <p className="mt-6 text-base leading-relaxed text-[var(--muted)]">
                   {room.desc}
                 </p>
                 <div className="mt-8 flex flex-wrap gap-6">
-                  <div className="flex items-center gap-2 text-sm text-[#3a423c]">
-                    <UsersIcon className="h-5 w-5 text-[#a9c4b3]" /> Up to {room.guests} Guests
+                  <div className="flex items-center gap-2 text-sm text-[var(--ink-soft)]">
+                    <UsersIcon className="h-5 w-5 text-[var(--forest-deep)]" /> Up to {room.guests} Guests
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-[#3a423c]">
-                    <BedDoubleIcon className="h-5 w-5 text-[#a9c4b3]" /> {room.bed}
+                  <div className="flex items-center gap-2 text-sm text-[var(--ink-soft)]">
+                    <BedDoubleIcon className="h-5 w-5 text-[var(--forest-deep)]" /> {room.bed}
                   </div>
                 </div>
-                <hr className="my-8 border-[#e6e6e1]" />
+                <hr className="my-8 border-[var(--line)]" />
                 <div className="grid gap-3 sm:grid-cols-2">
                   {room.features.map((feat) => (
-                    <div key={feat} className="flex items-center gap-2.5 text-sm text-[#3a423c]">
-                      <CheckIcon className="h-4 w-4 text-[#2e4a3f]" /> {feat}
+                    <div key={feat} className="flex items-center gap-2.5 text-sm text-[var(--ink-soft)]">
+                      <CheckIcon className="h-4 w-4 text-[var(--forest)]" /> {feat}
                     </div>
                   ))}
                 </div>

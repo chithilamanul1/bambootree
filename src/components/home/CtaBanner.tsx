@@ -7,7 +7,7 @@ import { Button } from '../ui/Button'
 
 export function CtaBanner() {
   return (
-    <section className="w-full bg-white px-6 pb-16 lg:pb-24 lg:px-10">
+    <section className="w-full bg-[var(--paper)] px-6 pb-16 lg:pb-24 lg:px-10">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}

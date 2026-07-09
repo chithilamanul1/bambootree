@@ -14,14 +14,14 @@ const rooms = [
 
 export function RoomPreview() {
   return (
-    <section className="w-full bg-white pb-16 lg:pb-24">
+    <section className="w-full bg-[var(--paper)] pb-16 lg:pb-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end lg:gap-6">
           <div className="max-w-xl">
-            <h2 className="font-serif-display text-2xl font-light tracking-editorial text-[#17201b] sm:text-3xl lg:text-4xl">
+            <h2 className="font-serif-display text-2xl font-light tracking-editorial text-[var(--ink)] sm:text-3xl lg:text-4xl">
               Best Hotel Rooms Near Airport
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-[#7b827b]">
+            <p className="mt-3 text-sm leading-relaxed text-[var(--muted)]">
               From quick transit rooms to nightly stays, we have the best airport accommodation for you.
             </p>
           </div>
@@ -43,10 +43,10 @@ export function RoomPreview() {
               </div>
               <div className="mt-4 flex items-start justify-between">
                 <div>
-                  <p className="flex items-center gap-1.5 text-xs text-[#7b827b]">
+                  <p className="flex items-center gap-1.5 text-xs text-[var(--muted)]">
                     <BedDoubleIcon className="h-3.5 w-3.5" /> {r.available}
                   </p>
-                  <h3 className="mt-1 font-serif-display text-xl text-[#17201b]">{r.name}</h3>
+                  <h3 className="mt-1 font-serif-display text-xl text-[var(--ink)]">{r.name}</h3>
                 </div>
                 <Button href="/rooms" variant="outline" className="!p-0 h-10 w-10 shrink-0 rounded-full">
                   <ArrowRightIcon className="h-4 w-4" />

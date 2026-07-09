@@ -38,24 +38,24 @@ export async function Testimonials() {
   }
 
   return (
-    <section className="w-full bg-white py-16 lg:py-24">
+    <section className="w-full bg-[var(--paper)] py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
           <div className="max-w-2xl">
             <SectionLabel>Live Google Reviews</SectionLabel>
-            <h2 className="mt-4 font-serif-display text-2xl font-light leading-tight tracking-editorial text-[#17201b] sm:text-3xl lg:mt-5 lg:text-4xl">
+            <h2 className="mt-4 font-serif-display text-2xl font-light leading-tight tracking-editorial text-[var(--ink)] sm:text-3xl lg:mt-5 lg:text-4xl">
               Top hotel near airport for travelers.
             </h2>
           </div>
           <div className="flex items-center gap-2 pb-2">
-            <div className="flex items-center gap-1 font-bold text-[#17201b] text-xl">
+            <div className="flex items-center gap-1 font-bold text-[var(--ink)] text-xl">
               4.8 <span className="text-[#e2c56b]">★</span>
             </div>
             <a 
               href="https://www.google.com/travel/hotels/entity/CgsIo8a3ltO5oOXrARAB" 
               target="_blank" 
               rel="noreferrer"
-              className="text-sm text-[#2e4a3f] hover:underline"
+              className="text-sm text-[var(--forest)] hover:underline"
             >
               See all reviews
             </a>

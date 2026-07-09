@@ -16,15 +16,15 @@ const features = [
 
 export function Convenience() {
   return (
-    <section className="w-full bg-white py-16 lg:py-24">
+    <section className="w-full bg-[var(--paper)] py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="max-w-2xl">
           <SectionLabel>Made for travelers</SectionLabel>
-          <h2 className="mt-4 font-serif-display text-2xl font-light leading-tight tracking-editorial text-[#17201b] sm:text-3xl lg:mt-5 lg:text-4xl">
+          <h2 className="mt-4 font-serif-display text-2xl font-light leading-tight tracking-editorial text-[var(--ink)] sm:text-3xl lg:mt-5 lg:text-4xl">
             Everything you need for your airport layover and transit stay.
           </h2>
         </div>
-        <div className="mt-8 grid gap-px overflow-hidden rounded-2xl border border-[#e6e6e1] bg-[#e6e6e1] sm:grid-cols-2 lg:mt-14 lg:grid-cols-3 lg:rounded-3xl">
+        <div className="mt-8 grid gap-px overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--line)] sm:grid-cols-2 lg:mt-14 lg:grid-cols-3 lg:rounded-3xl">
           {features.map((f, i) => (
             <motion.div
               key={f.title}
@@ -32,13 +32,13 @@ export function Convenience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
-              className="group bg-white p-6 transition-colors hover:bg-[#f4f4f1] lg:p-8"
+              className="group bg-[var(--paper)] p-6 transition-colors hover:bg-[var(--paper-alt)] lg:p-8"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#eef1ea] text-[#2e4a3f] transition-colors group-hover:bg-[#2e4a3f] group-hover:text-white lg:h-11 lg:w-11">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--sage)] text-[var(--forest)] transition-colors group-hover:bg-[#a9c4b3] group-hover:text-[#0a0f0c] lg:h-11 lg:w-11">
                 <f.icon className="h-5 w-5" />
               </span>
-              <h3 className="mt-4 font-serif-display text-lg text-[#17201b] lg:mt-5 lg:text-xl">{f.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-[#7b827b]">{f.desc}</p>
+              <h3 className="mt-4 font-serif-display text-lg text-[var(--ink)] lg:mt-5 lg:text-xl">{f.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">{f.desc}</p>
             </motion.div>
           ))}
         </div>

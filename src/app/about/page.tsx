@@ -7,7 +7,7 @@ import { LeafIcon, MapPinIcon, HeartIcon } from 'lucide-react'
 
 export default function About() {
   return (
-    <div className="w-full bg-white pb-24">
+    <div className="w-full bg-[var(--paper)] pb-24">
       <PageHeader
         label="Our Story"
         title="The Bamboo Tree Hotel"
@@ -22,10 +22,10 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-serif-display text-4xl font-light leading-tight tracking-editorial text-[#17201b]">
+            <h2 className="font-serif-display text-4xl font-light leading-tight tracking-editorial text-[var(--ink)]">
               A better way to wait for your flight.
             </h2>
-            <div className="mt-8 space-y-6 text-lg leading-relaxed text-[#7b827b]">
+            <div className="mt-8 space-y-6 text-lg leading-relaxed text-[var(--muted)]">
               <p>
                 We built The Bamboo Tree Transit Hotel because layovers can be very tiring. You need a good hotel near airport to sleep and relax. We wanted to make a place where you can easily rest before your next flight.
               </p>
@@ -35,19 +35,19 @@ export default function About() {
             </div>
             <div className="mt-12 grid gap-8 sm:grid-cols-3">
               <div>
-                <LeafIcon className="h-8 w-8 text-[#2e4a3f]" />
-                <h3 className="mt-4 font-serif-display text-xl text-[#17201b]">Eco-conscious</h3>
-                <p className="mt-2 text-sm text-[#7b827b]">Sustainable practices in every room.</p>
+                <LeafIcon className="h-8 w-8 text-[var(--forest)]" />
+                <h3 className="mt-4 font-serif-display text-xl text-[var(--ink)]">Eco-conscious</h3>
+                <p className="mt-2 text-sm text-[var(--muted)]">Sustainable practices in every room.</p>
               </div>
               <div>
-                <MapPinIcon className="h-8 w-8 text-[#2e4a3f]" />
-                <h3 className="mt-4 font-serif-display text-xl text-[#17201b]">Ultra-close</h3>
-                <p className="mt-2 text-sm text-[#7b827b]">Literally minutes from arrivals.</p>
+                <MapPinIcon className="h-8 w-8 text-[var(--forest)]" />
+                <h3 className="mt-4 font-serif-display text-xl text-[var(--ink)]">Ultra-close</h3>
+                <p className="mt-2 text-sm text-[var(--muted)]">Literally minutes from arrivals.</p>
               </div>
               <div>
-                <HeartIcon className="h-8 w-8 text-[#2e4a3f]" />
-                <h3 className="mt-4 font-serif-display text-xl text-[#17201b]">Care-driven</h3>
-                <p className="mt-2 text-sm text-[#7b827b]">Hospitality that anticipates needs.</p>
+                <HeartIcon className="h-8 w-8 text-[var(--forest)]" />
+                <h3 className="mt-4 font-serif-display text-xl text-[var(--ink)]">Care-driven</h3>
+                <p className="mt-2 text-sm text-[var(--muted)]">Hospitality that anticipates needs.</p>
               </div>
             </div>
           </motion.div>
@@ -63,9 +63,9 @@ export default function About() {
               alt="Lobby of Bamboo Tree"
               className="rounded-3xl object-cover shadow-xl"
             />
-            <div className="absolute -bottom-8 -left-8 hidden rounded-2xl bg-[#eef1ea] p-8 lg:block">
-              <p className="font-serif-display text-4xl text-[#2e4a3f]">2018</p>
-              <p className="mt-2 text-sm uppercase tracking-widest text-[#7b827b]">Year Founded</p>
+            <div className="absolute -bottom-8 -left-8 hidden rounded-2xl bg-[var(--sage)] p-8 lg:block">
+              <p className="font-serif-display text-4xl text-[var(--forest)]">2018</p>
+              <p className="mt-2 text-sm uppercase tracking-widest text-[var(--muted)]">Year Founded</p>
             </div>
           </motion.div>
         </div>

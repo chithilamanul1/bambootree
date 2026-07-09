@@ -4,7 +4,7 @@ import { LeafIcon, MapPinIcon, PhoneIcon, MailIcon, PlaneIcon } from 'lucide-rea
 
 export function Footer() {
   return (
-    <footer className="w-full bg-[#22382f] text-white">
+    <footer className="w-full bg-[var(--paper-alt)] border-t border-[var(--line)] text-[var(--ink)]">
       <div className="mx-auto grid max-w-7xl gap-8 px-6 py-12 lg:gap-12 lg:grid-cols-4 lg:px-10 lg:py-16">
         <div className="lg:col-span-2">
           <Link href="/" className="flex items-center gap-2.5">
