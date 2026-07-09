@@ -4,6 +4,7 @@ import './globals.css'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
+import { ThemeProvider } from '@/components/layout/ThemeProvider'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -82,11 +83,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
       <body className="flex min-h-screen w-full flex-col font-sans antialiased">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <WhatsAppButton />
-        <Footer />
-        <script
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <WhatsAppButton />
+          <Footer />
+          <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -123,6 +125,7 @@ export default function RootLayout({
             })
           }}
         />
+        </ThemeProvider>
       </body>
     </html>
   )

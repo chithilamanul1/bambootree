@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MenuIcon, XIcon, LeafIcon, PhoneIcon } from 'lucide-react'
 import { Button } from '../ui/Button'
+import { ThemeToggle } from '../ui/ThemeToggle'
 
 const links = [
   { label: 'Home', href: '/' },
@@ -99,19 +100,23 @@ export function Navbar() {
           >
             <PhoneIcon className="h-4 w-4" /> +94 76 726 9361
           </a>
+          <ThemeToggle overlay={overlay} />
           <Button href="https://www.booking.com/hotel/lk/the-bamboo-tree-transit.html" variant={overlay ? 'light' : 'primary'}>
             Book your stay
           </Button>
         </div>
 
-        <button
-          className={`lg:hidden ${textColor}`}
-          onClick={() => setOpen((v) => !v)}
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          aria-expanded={open}
-        >
-          {open ? <XIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <ThemeToggle overlay={overlay} />
+          <button
+            className={`${textColor}`}
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+          >
+            {open ? <XIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
+          </button>
+        </div>
       </nav>
 
       <AnimatePresence>

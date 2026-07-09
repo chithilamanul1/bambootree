@@ -1,6 +1,7 @@
 import React from 'react'
 import { SectionLabel } from '../ui/SectionLabel'
 import { AnimatedReviewCard } from './AnimatedReviewCard'
+import { ReviewAction } from '../ui/ReviewAction'
 
 async function getGoogleReviews() {
   const placeId = 'ChIJZ3qdCF7x4joRI-PNMs2Byus'
@@ -47,18 +48,21 @@ export async function Testimonials() {
               Top hotel near airport for travelers.
             </h2>
           </div>
-          <div className="flex items-center gap-2 pb-2">
-            <div className="flex items-center gap-1 font-bold text-[var(--ink)] text-xl">
-              4.8 <span className="text-[#e2c56b]">★</span>
+          <div className="flex flex-col items-end gap-2 pb-2">
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-1 font-bold text-[var(--ink)] text-xl">
+                4.8 <span className="text-[#e2c56b]">★</span>
+              </div>
+              <a 
+                href="https://www.google.com/travel/hotels/entity/CgsIo8a3ltO5oOXrARAB" 
+                target="_blank" 
+                rel="noreferrer"
+                className="text-sm text-[var(--forest)] hover:underline"
+              >
+                See all reviews
+              </a>
             </div>
-            <a 
-              href="https://www.google.com/travel/hotels/entity/CgsIo8a3ltO5oOXrARAB" 
-              target="_blank" 
-              rel="noreferrer"
-              className="text-sm text-[var(--forest)] hover:underline"
-            >
-              See all reviews
-            </a>
+            <ReviewAction />
           </div>
         </div>
         <div className="mt-8 grid gap-4 md:grid-cols-3 lg:mt-14 lg:gap-6">

@@ -8,6 +8,21 @@
 }
 
 :root {
+  --background: #ffffff;
+  --foreground: #17201b;
+  --paper: #ffffff;
+  --paper-alt: #f4f4f1;
+  --ink: #17201b;
+  --ink-soft: #3a423c;
+  --muted: #7b827b;
+  --line: #e6e6e1;
+  --forest: #2e4a3f;
+  --forest-deep: #22382f;
+  --sage: #eef1ea;
+  --sage-line: #d6ddce;
+}
+
+.dark {
   --background: #0a0f0c;
   --foreground: #eef1ea;
   --paper: #0a0f0c;

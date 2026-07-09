@@ -110,8 +110,8 @@ export default function Rooms() {
                   ))}
                 </div>
                 <div className="mt-10">
-                  <Button variant="outline">
-                    Check Availability <ArrowRightIcon className="h-4 w-4" />
+                  <Button href="https://www.booking.com/hotel/lk/the-bamboo-tree-transit.html" variant="primary">
+                    Book Now <ArrowRightIcon className="h-5 w-5" />
                   </Button>
                 </div>
               </div>

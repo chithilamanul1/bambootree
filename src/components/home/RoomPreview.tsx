@@ -48,8 +48,8 @@ export function RoomPreview() {
                   </p>
                   <h3 className="mt-1 font-serif-display text-xl text-[var(--ink)]">{r.name}</h3>
                 </div>
-                <Button href="/rooms" variant="outline" className="!p-0 h-10 w-10 shrink-0 rounded-full">
-                  <ArrowRightIcon className="h-4 w-4" />
+                <Button href="https://www.booking.com/hotel/lk/the-bamboo-tree-transit.html" variant="primary" className="shrink-0 px-4 py-2 text-xs">
+                  Book <ArrowRightIcon className="h-3 w-3" />
                 </Button>
               </div>
             </motion.div>

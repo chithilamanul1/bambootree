@@ -68,22 +68,22 @@ export function Hero() {
                 window.open(`https://wa.me/94767269361?text=${text}`, '_blank')
                 window.location.href = `mailto:info@thebambootree.lk?subject=Room Booking Inquiry&body=${decodeURIComponent(text)}`
               }}
-              className="w-full rounded-2xl border border-white/15 bg-black/40 p-4 backdrop-blur-xl lg:p-5"
+              className="w-full rounded-md border-[4px] border-[#febb02] bg-[var(--paper)] p-4 shadow-2xl lg:p-6"
             >
-              <div className="mb-2 flex items-center justify-between">
-                <p className="font-serif-display text-base text-white lg:text-lg">
+              <div className="mb-4 flex items-center justify-between">
+                <p className="font-serif-display text-lg text-[var(--ink)] lg:text-xl font-bold">
                   Book Your Room Today
                 </p>
-                <ArrowUpRightIcon className="h-4 w-4 text-white/60" />
+                <ArrowUpRightIcon className="h-5 w-5 text-[var(--forest)]" />
               </div>
 
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <WidgetField icon={UsersIcon}>
                   <select
                     aria-label="Guests and rooms"
                     value={guests}
                     onChange={(e) => setGuests(e.target.value)}
-                    className="w-full bg-transparent text-sm text-white focus:outline-none [&>option]:text-[#17201b]"
+                    className="w-full bg-transparent text-base font-medium text-[var(--ink)] focus:outline-none cursor-pointer"
                   >
                     <option>1 Guest, 1 Room</option>
                     <option>2 Guests, 1 Room</option>
@@ -99,21 +99,21 @@ export function Hero() {
                     onChange={(e) => setDates(e.target.value)}
                     onFocus={(e) => (e.target.type = 'date')}
                     onBlur={(e) => { if (!e.target.value) e.target.type = 'text' }}
-                    placeholder="Add dates"
-                    className="w-full bg-transparent text-sm text-white placeholder-white/50 focus:outline-none"
+                    placeholder="Check-in - Check-out"
+                    className="w-full bg-transparent text-base font-medium text-[var(--ink)] placeholder-[var(--muted)] focus:outline-none"
                   />
                 </WidgetField>
               </div>
 
               <button
                 type="submit"
-                className="mt-3 flex w-full items-center justify-center gap-2 rounded-xl bg-white py-2.5 text-sm font-medium text-[#17201b] transition-transform hover:-translate-y-0.5 lg:py-3"
+                className="mt-4 flex w-full items-center justify-center gap-2 rounded-[4px] bg-[#003b95] py-3.5 text-lg font-bold text-white transition-colors hover:bg-[#00224f]"
               >
-                Book Now <ArrowRightIcon className="h-4 w-4" />
+                Book Now <ArrowRightIcon className="h-5 w-5" />
               </button>
             </form>
 
-            <div className="mt-4 flex items-center justify-center gap-4 text-sm text-white/70">
+            <div className="mt-5 flex items-center justify-center gap-4 text-sm font-medium text-white shadow-black drop-shadow-md">
               <span>Or book on:</span>
               <a
                 href="https://www.booking.com/hotel/lk/the-bamboo-tree-transit.html"
@@ -148,8 +148,8 @@ function WidgetField({
   children: React.ReactNode
 }) {
   return (
-    <div className="flex items-center gap-2.5 rounded-xl border border-white/10 bg-white/5 px-3.5 py-2.5">
-      <Icon className="h-4 w-4 shrink-0 text-white/60" />
+    <div className="flex items-center gap-3 rounded-[4px] border-2 border-[var(--line)] bg-[var(--paper)] px-4 py-3 focus-within:border-[#003b95]">
+      <Icon className="h-5 w-5 shrink-0 text-[var(--ink)]" />
       {children}
     </div>
   )
