@@ -8,9 +8,11 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-8 px-6 py-12 lg:gap-12 lg:grid-cols-4 lg:px-10 lg:py-16">
         <div className="lg:col-span-2">
           <Link href="/" className="flex items-center gap-2.5">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#2e4a3f]">
-              <LeafIcon className="h-4 w-4" />
-            </span>
+            <img 
+              src="/logo.svg" 
+              alt="The Bamboo Tree Logo" 
+              className="h-9 w-9 shrink-0 rounded-full" 
+            />
             <span className="font-serif-display text-xl tracking-editorial text-white">
               The Bamboo Tree
             </span>

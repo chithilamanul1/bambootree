@@ -51,13 +51,11 @@ export function Navbar() {
           className="flex items-center gap-2.5"
           aria-label="The Bamboo Tree home"
         >
-          <span
-            className={`flex h-9 w-9 items-center justify-center rounded-full ${
-              overlay ? 'bg-white text-[#2e4a3f]' : 'bg-[#2e4a3f] text-white'
-            }`}
-          >
-            <LeafIcon className="h-4 w-4" strokeWidth={2} />
-          </span>
+          <img 
+            src="/logo.svg" 
+            alt="The Bamboo Tree Logo" 
+            className="h-9 w-9 shrink-0 rounded-full" 
+          />
           <span className="flex flex-col leading-none">
             <span className={`font-serif-display text-lg tracking-editorial ${textColor}`}>
               The Bamboo Tree
