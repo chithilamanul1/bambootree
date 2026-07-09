@@ -2,11 +2,11 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { PlaneIcon, ClockIcon, WifiIcon, ShowerHeadIcon, LuggageIcon, CoffeeIcon } from 'lucide-react'
+import { MapPinIcon, ClockIcon, WifiIcon, ShowerHeadIcon, LuggageIcon, CoffeeIcon } from 'lucide-react'
 import { SectionLabel } from '../ui/SectionLabel'
 
 const features = [
-  { icon: PlaneIcon, title: 'Free Airport Shuttle', desc: 'Free rides to and from the airport day and night.' },
+  { icon: MapPinIcon, title: 'Prime Location', desc: 'Located just minutes away from the airport to save your travel time.' },
   { icon: ClockIcon, title: 'Flexible Stays', desc: 'Book by the hour for a short layover or a full night.' },
   { icon: ShowerHeadIcon, title: 'Clean & Fresh', desc: 'Hot showers, clean beds, and dark rooms for good sleep.' },
   { icon: WifiIcon, title: 'Fast Free Wi-Fi', desc: 'Fast internet to work, watch movies, or check your flight.' },
