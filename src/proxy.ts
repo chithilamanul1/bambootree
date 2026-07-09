@@ -4,7 +4,7 @@ import { jwtVerify } from 'jose'
 
 const secret = process.env.JWT_SECRET || 'fallback_secret'
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname
   const isAuthRoute = path === '/admin/login'
   const isAdminRoute = path.startsWith('/admin')
