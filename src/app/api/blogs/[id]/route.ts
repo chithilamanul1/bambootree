@@ -3,14 +3,15 @@ import { connectToDatabase } from '@/lib/db'
 import { Blog } from '@/models/Blog'
 import { verifyAuth } from '@/lib/auth'
 
-export async function PUT(req: Request, { params }: { params: { id: string } }) {
+export async function PUT(req: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
     const auth = await verifyAuth()
     if (!auth) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
     await connectToDatabase()
     const data = await req.json()
-    const blog = await Blog.findByIdAndUpdate(params.id, data, { new: true })
+    const { id } = await params
+    const blog = await Blog.findByIdAndUpdate(id, data, { new: true })
     if (!blog) return NextResponse.json({ error: 'Blog not found' }, { status: 404 })
     return NextResponse.json(blog)
   } catch (error) {
@@ -18,13 +19,14 @@ export async function PUT(req: Request, { params }: { params: { id: string } }) 
   }
 }
 
-export async function DELETE(req: Request, { params }: { params: { id: string } }) {
+export async function DELETE(req: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
     const auth = await verifyAuth()
     if (!auth) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
     await connectToDatabase()
-    const blog = await Blog.findByIdAndDelete(params.id)
+    const { id } = await params
+    const blog = await Blog.findByIdAndDelete(id)
     if (!blog) return NextResponse.json({ error: 'Blog not found' }, { status: 404 })
     return NextResponse.json({ success: true })
   } catch (error) {
