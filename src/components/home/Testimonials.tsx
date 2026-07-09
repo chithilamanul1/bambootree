@@ -29,16 +29,13 @@ async function getGoogleReviews() {
 export async function Testimonials() {
   const reviews = await getGoogleReviews()
   
-  // Fallback reviews just in case the API fails or key is missing
-  const displayReviews = reviews.length > 0 ? reviews : [
-    { text: 'The best colombo transit hotel! It is very quiet and clean. I slept great before my flight and the free car ride was on time.', author_name: 'Anjali R.', relative_time_description: 'Layover guest', rating: 5, profile_photo_url: 'https://lh3.googleusercontent.com/a/default-user=s128' },
-    { text: 'I booked a transit room for six hours. It is a great layover hotel near the airport. Very nice and green hotel.', author_name: 'Marcus T.', relative_time_description: 'Business traveler', rating: 5, profile_photo_url: 'https://lh3.googleusercontent.com/a/default-user=s128' },
-    { text: 'One of the best hotels in Negombo. The staff is so kind and the food is great. Very close to the airport.', author_name: 'Priya S.', relative_time_description: 'Happy customer', rating: 5, profile_photo_url: 'https://lh3.googleusercontent.com/a/default-user=s128' },
-  ]
+  // We only want to display 3 nicely
+  const topReviews = reviews.filter((r: any) => r.rating >= 4).slice(0, 3)
 
-  // We only want to display 3 nicely, or maybe 3-6 depending on layout. Let's show up to 3 to keep it clean, or 5 if we change the grid.
-  // We'll show the top 3 most recent 5-star reviews to keep the UI symmetrical to the old one.
-  const topReviews = displayReviews.filter((r: any) => r.rating >= 4).slice(0, 3)
+  if (topReviews.length === 0) {
+    // If API fails or no reviews, we simply don't show the section rather than showing fake data.
+    return null
+  }
 
   return (
     <section className="w-full bg-white py-16 lg:py-24">
