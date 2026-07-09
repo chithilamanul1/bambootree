@@ -45,7 +45,7 @@ export function Navbar() {
           : 'border-b border-[#e6e6e1] bg-white/90 backdrop-blur-md'
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+      <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
         <Link
           href="/"
           className="flex items-center gap-2.5"
@@ -56,7 +56,7 @@ export function Navbar() {
             alt="The Bamboo Tree Logo" 
             className="h-9 w-9 shrink-0 rounded-full" 
           />
-          <span className="flex flex-col leading-none">
+          <span className="flex flex-col leading-none mt-0.5">
             <span className={`font-serif-display text-lg tracking-editorial ${textColor}`}>
               The Bamboo Tree
             </span>
@@ -66,7 +66,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        <ul className="hidden items-center gap-8 lg:flex">
+        <ul className="hidden items-center gap-8 lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
           {links.map((l) => {
             const isActive = pathname === l.href
             return (
