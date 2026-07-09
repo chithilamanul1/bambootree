@@ -25,16 +25,16 @@ interface ButtonAsLink extends BaseProps {
 type ButtonProps = ButtonAsButton | ButtonAsLink
 
 const base =
-  'inline-flex items-center justify-center gap-2 rounded-md px-7 py-3 text-sm font-semibold tracking-wide transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--forest)] focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:bg-auto'
+  'inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-medium tracking-wide transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--forest)] focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:bg-auto hover:shadow-lg'
 
 const variants: Record<Variant, string> = {
   primary:
-    'bg-[#003b95] text-white hover:bg-[#00224f] shadow-md border border-[#003b95]', // Booking.com style sharp blue CTA
+    'bg-[var(--forest)] text-[var(--paper)] hover:bg-[var(--forest-deep)] border border-[var(--forest-deep)] shadow-md shadow-[var(--forest)]/20',
   outline:
-    'border-2 border-[var(--forest)] text-[var(--ink)] hover:bg-[var(--forest)] hover:text-[var(--paper)]',
-  ghost: 'text-[var(--forest)] hover:bg-[var(--paper-alt)]',
+    'border border-[var(--line)] bg-[var(--paper)]/40 backdrop-blur-md text-[var(--ink)] hover:bg-[var(--paper)] shadow-sm',
+  ghost: 'text-[var(--forest)] hover:bg-[var(--paper-alt)]/50 backdrop-blur-sm',
   light:
-    'bg-[var(--paper)] text-[var(--ink)] hover:bg-[var(--paper-alt)] shadow-sm border border-[var(--line)]',
+    'bg-white/90 backdrop-blur-lg text-[#17201b] hover:bg-white border border-white/40 shadow-md',
 }
 
 export function Button(props: ButtonProps) {
