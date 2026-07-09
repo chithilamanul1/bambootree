@@ -8,7 +8,9 @@ import 'react-phone-number-input/style.css'
 
 export function Hero() {
   const [dates, setDates] = useState('')
-  const [guests, setGuests] = useState('1 Guest, 1 Room')
+  const [adults, setAdults] = useState('1')
+  const [children, setChildren] = useState('0')
+  const [rooms, setRooms] = useState('1')
   const [phone, setPhone] = useState<string | undefined>('')
   const [isLoading, setIsLoading] = useState(false)
 
@@ -21,7 +23,7 @@ export function Hero() {
       await fetch('/api/email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ dates, guests, rooms: 1, phone }), 
+        body: JSON.stringify({ dates, guests: `${adults} Adults, ${children} Children`, rooms, phone }), 
       })
     } catch (error) {
       console.error('Failed to send email:', error)
@@ -30,7 +32,7 @@ export function Hero() {
     }
 
     // 2. Open WhatsApp (No Email redirect per user request)
-    const text = `Hello Bamboo Tree! I would like to book.%0A%0A*Dates:* ${dates || 'Not selected'}%0A*Guests:* ${guests}%0A*My WhatsApp:* ${phone || 'Not provided'}`
+    const text = `Hello Bamboo Tree! I would like to book.%0A%0A*Dates:* ${dates || 'Not selected'}%0A*Guests:* ${adults} Adults, ${children} Children%0A*Rooms:* ${rooms}%0A*My WhatsApp:* ${phone || 'Not provided'}`
     window.open(`https://wa.me/94767269361?text=${text}`, '_blank')
   }
 
@@ -98,16 +100,44 @@ export function Hero() {
               </div>
 
               <div className="space-y-4">
+                <div className="flex gap-3">
+                  <WidgetField icon={UsersIcon}>
+                    <select
+                      value={adults}
+                      onChange={(e) => setAdults(e.target.value)}
+                      className="w-full bg-transparent text-sm font-medium text-white focus:outline-none cursor-pointer [&>option]:text-black"
+                    >
+                      <option value="1">1 Adult</option>
+                      <option value="2">2 Adults</option>
+                      <option value="3">3 Adults</option>
+                      <option value="4">4 Adults</option>
+                    </select>
+                  </WidgetField>
+                  
+                  <WidgetField icon={UsersIcon}>
+                    <select
+                      value={children}
+                      onChange={(e) => setChildren(e.target.value)}
+                      className="w-full bg-transparent text-sm font-medium text-white focus:outline-none cursor-pointer [&>option]:text-black"
+                    >
+                      <option value="0">0 Children</option>
+                      <option value="1">1 Child</option>
+                      <option value="2">2 Children</option>
+                      <option value="3">3 Children</option>
+                    </select>
+                  </WidgetField>
+                </div>
+
                 <WidgetField icon={UsersIcon}>
                   <select
-                    value={guests}
-                    onChange={(e) => setGuests(e.target.value)}
+                    value={rooms}
+                    onChange={(e) => setRooms(e.target.value)}
                     className="w-full bg-transparent text-sm font-medium text-white focus:outline-none cursor-pointer [&>option]:text-black"
                   >
-                    <option>1 Guest, 1 Room</option>
-                    <option>2 Guests, 1 Room</option>
-                    <option>2 Guests, 2 Rooms</option>
-                    <option>4 Guests, 2 Rooms</option>
+                    <option value="1">1 Room</option>
+                    <option value="2">2 Rooms</option>
+                    <option value="3">3 Rooms</option>
+                    <option value="4">4 Rooms</option>
                   </select>
                 </WidgetField>
 
