@@ -60,3 +60,7 @@ body {
   background: var(--forest);
   color: #fff;
 }
+
+.phone-input-glass .PhoneInputInput { background: transparent; color: white; font-size: 0.875rem; font-weight: 500; border: none; outline: none; }
+.phone-input-glass .PhoneInputInput::placeholder { color: rgba(255,255,255,0.6); }
+.phone-input-glass .PhoneInputCountryIcon { background: transparent; }

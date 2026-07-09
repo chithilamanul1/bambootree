@@ -2,11 +2,14 @@
 
 import React, { useState, ComponentType } from 'react'
 import { motion } from 'framer-motion'
-import { StarIcon, UsersIcon, CalendarIcon, ArrowRightIcon, ArrowUpRightIcon } from 'lucide-react'
+import { StarIcon, UsersIcon, CalendarIcon, ArrowRightIcon, ArrowUpRightIcon, PhoneIcon } from 'lucide-react'
+import PhoneInput from 'react-phone-number-input'
+import 'react-phone-number-input/style.css'
 
 export function Hero() {
   const [dates, setDates] = useState('')
   const [guests, setGuests] = useState('1 Guest, 1 Room')
+  const [phone, setPhone] = useState<string | undefined>('')
   const [isLoading, setIsLoading] = useState(false)
 
   const handleSearch = async (e: React.FormEvent) => {
@@ -18,7 +21,7 @@ export function Hero() {
       await fetch('/api/email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ dates, guests, rooms: 1 }), // Keeping rooms static if they use the combined dropdown like in the image
+        body: JSON.stringify({ dates, guests, rooms: 1, phone }), 
       })
     } catch (error) {
       console.error('Failed to send email:', error)
@@ -26,10 +29,9 @@ export function Hero() {
       setIsLoading(false)
     }
 
-    // 2. Open WhatsApp & Email Client
-    const text = `Hello Bamboo Tree! I would like to book.%0A%0A*Dates:* ${dates || 'Not selected'}%0A*Guests:* ${guests}`
+    // 2. Open WhatsApp (No Email redirect per user request)
+    const text = `Hello Bamboo Tree! I would like to book.%0A%0A*Dates:* ${dates || 'Not selected'}%0A*Guests:* ${guests}%0A*My WhatsApp:* ${phone || 'Not provided'}`
     window.open(`https://wa.me/94767269361?text=${text}`, '_blank')
-    window.location.href = `mailto:info@thebambootree.lk?subject=Room Booking Inquiry&body=${decodeURIComponent(text)}`
   }
 
   return (
@@ -119,6 +121,19 @@ export function Hero() {
                     placeholder="Add dates"
                     className="w-full bg-transparent text-sm font-medium text-white placeholder-white/60 focus:outline-none"
                   />
+                </WidgetField>
+
+                <WidgetField icon={PhoneIcon}>
+                  <div className="w-full phone-input-glass">
+                    <PhoneInput
+                      placeholder="WhatsApp Number"
+                      value={phone}
+                      onChange={setPhone}
+                      defaultCountry="LK"
+                      international
+                      className="w-full"
+                    />
+                  </div>
                 </WidgetField>
               </div>
 
