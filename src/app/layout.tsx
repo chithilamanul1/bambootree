@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Fraunces } from 'next/font/google'
+import { Inter, Fraunces, Great_Vibes } from 'next/font/google'
 import './globals.css'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
@@ -14,6 +14,12 @@ const inter = Inter({
 const fraunces = Fraunces({
   subsets: ['latin'],
   variable: '--font-fraunces',
+})
+
+const greatVibes = Great_Vibes({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-great-vibes',
 })
 
 export const metadata: Metadata = {
@@ -81,7 +87,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
+    <html lang="en" className={`${inter.variable} ${fraunces.variable} ${greatVibes.variable}`}>
       <body className="flex min-h-screen w-full flex-col font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <Navbar />

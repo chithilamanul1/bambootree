@@ -58,7 +58,10 @@ export function Navbar() {
             className="h-9 w-9 shrink-0 rounded-full" 
           />
           <span className="flex flex-col leading-none mt-0.5">
-            <span className={`font-serif-display text-lg tracking-editorial ${textColor}`}>
+            <span 
+              className={`text-3xl pr-1 ${textColor}`} 
+              style={{ fontFamily: 'var(--font-great-vibes), cursive' }}
+            >
               The Bamboo Tree
             </span>
             <span className={`text-[10px] uppercase tracking-[0.3em] ${subColor}`}>
