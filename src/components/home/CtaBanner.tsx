@@ -29,7 +29,7 @@ export function CtaBanner() {
             Reserve a room in under a minute, or ask us anything on WhatsApp.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button href="/rooms" variant="light">
+            <Button href="https://www.booking.com/hotel/lk/the-bamboo-tree-transit.html" variant="light">
               Book your stay <ArrowRightIcon className="h-4 w-4" />
             </Button>
             <Button

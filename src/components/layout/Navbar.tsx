@@ -99,7 +99,7 @@ export function Navbar() {
           >
             <PhoneIcon className="h-4 w-4" /> +94 76 726 9361
           </a>
-          <Button href="/rooms" variant={overlay ? 'light' : 'primary'}>
+          <Button href="https://www.booking.com/hotel/lk/the-bamboo-tree-transit.html" variant={overlay ? 'light' : 'primary'}>
             Book your stay
           </Button>
         </div>
@@ -142,7 +142,7 @@ export function Navbar() {
                 )
               })}
               <li className="pt-2">
-                <Button href="/rooms" variant="primary" className="w-full">
+                <Button href="https://www.booking.com/hotel/lk/the-bamboo-tree-transit.html" variant="primary" className="w-full">
                   Book your stay
                 </Button>
               </li>
